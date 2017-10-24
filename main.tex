@@ -1,0 +1,173 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{natbib} %pacotes de bibiografia
+\usepackage[pdftex]{hyperref} %Para link/url
+%\usepackage{pdfpages} % Para adicionar paginas de arquivos .pdf no documento
+
+\usepackage[left=3cm, right=2cm, top=3cm, bottom=2cm]{geometry} %seta as margens do arquivo
+
+%\title{Minicurso: Introdução ao LaTeX} 
+%\author{Joaozinho \thanks{joaozinho@teste.com} \and zezinho \thanks{zezinho@teste.com}} 
+%\date{\today}
+
+\begin{document}
+%\maketitle %Adiciona capa automaticamente COMENTAR
+
+\begin{titlepage}
+	\begin{center} %Centraliza o texto
+		\huge{Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina}
+
+\vspace{10pt} 
+\begin{figure}[!ht]
+\centering
+\includegraphics[height=3cm, width=8cm]{LOGO.jpg}
+\end{figure}
+        
+        \vspace{85pt}
+        
+		\textbf{\LARGE{Disciplina II}}\\  	%ALLTERE AQUI O NOME DA DISCIPLINA
+		\large{Título do relatório} 		%ALTERE AQUI O TITULO DO SEU RELATORIO
+		\vspace{160pt}
+		
+	\end{center}
+	
+	\begin{flushleft}
+		\begin{tabbing}
+			Alunos:\qquad\qquad\= Natan Ogliari\\   %ALTERE AQUI O NOME DOS ALUNOS
+			\>Rafael Gustavo Nagel\\  %Para Mais de um integrante
+            %\>3 integrante \\ %Para mais segue a mesma logica.
+            
+			Professor:\> Antônio Pereira Cândido \\
+            		%\> Chefe 2 \\ %Para adicionar um segundo professor
+		
+	\end{tabbing}
+		  
+	\end{flushleft}
+	
+	\begin{center}
+		\vspace{\fill}
+		Florianópolis/SC, 25 de Outubro de 2017
+	\end{center}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+%\listoftables %Lista as tabelas
+\thispagestyle{empty}
+
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivo}
+O objetivo deste documento é disponibilizar um modelo padrão de relatório para o IFSC em \LaTeX.
+\par Para teste do novo paragrafo.
+
+\section{Equipamentos Utilizados} 
+
+Para o experimento\footnote{Um exemplo de rodapé} em questão foram utilizados dois geradores síncronos em que um atuava como motor para configurar um conjunto motor síncrono-gerador síncrono. A função do motor síncrono é a de fornecer potência mecânica ao eixo do gerador para que, então, seja possível realizar os ensaios no gerador síncrono. As placas de dados do motor e do gerador síncrono estão ilustrados nas Figuras\footnote{Um exemplo de rodapé}
+\par "par" comando para novo paragrafo.
+
+
+\section{Procedimento Experimental}
+
+Descrição procedimento
+
+
+ \subsection{subseção1}
+  tabela exemplo
+  
+  %\subsubsection{dgh}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{c|c}
+$I_{exc}$ [A] & $V_{a}$ [V] \\ \hline
+0.188	& 2.63 		\\\hline
+0.88 & 20.55	\\\hline
+1.83 & 39.26 \\\hline
+2.66 & 55.19 \\\hline
+3.78 & 74.94 \\\hline
+5.00 & 93.70 \\\hline
+6.28 & 109.87 \\\hline
+7.55 & 122.28 \\\hline
+10.05 & 139.03 \\\hline
+11.98 & 148.55 \\\hline
+13.30 & 153.92 
+
+\end{tabular}
+\caption{Pontos coletados para o ensaio à vazio}
+\label{PTO:col_vazio}
+\end{table}
+
+\section{Inserindo imagens}
+Neste topito temos um exemplo de adição de imagens.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.5]{latex_logo.png}
+\caption{Logo do LaTeX} \cite{lamport1994latex} %Adiciona uma legenda na imagem
+\label{fig:Logo_latex}
+\end{figure}
+
+Na Figura \ref{fig:Logo_latex} foi visto como adicionar uma figura, e agora vemos como citar ela no decorrer do documento. Aproveitamos para analisar a citação da Tabela \ref{PTO:col_vazio}.
+
+\section{Análise dos Resultados}
+
+Para inserirmos uma fórmula utilizamos a seguinte sintase:
+\begin{equation}
+\int a^{2}=b^{2}+c^{2}
+\label{EQ:pitagoras}
+\end{equation}
+\begin{equation}
+\sqrt[4]{N}
+\end{equation}
+\begin{equation}
+\sum_{n=0}^{\infty} a_{n}^{2}
+\end{equation}
+
+\begin{quote}
+Acima foi visto como inserir uma fórmula, e aqui foi enfatizado a afirmação.\par Observem a numeração automática das fórmulas.
+\end{quote}
+
+\begin{equation}
+f(t)= \frac{A}{2} + \frac{jA}{2 \pi }
+\sum_{\stackrel{-\infty}{n
+\neq 0}}^{\infty} \frac{1}{n} \, e^{jn2\pi t}
+\end{equation}
+\begin{equation}
+\int_{-L}^{L} sen \frac{m \pi x}{2}\,sen \frac{n \pi x}{2}\,dx =
+\left \{
+\begin{array}{cc}
+0, & m \neq n \\
+1, & m = n \\
+\end{array}
+\right.
+\end{equation}
+
+Um dos fatores importentes neste modelo de documentação é a propria citação das imagens/figuras no próprio texto
+
+\section{Conclusão}
+uma citação automatica \cite{burns1961management}
+
+conclusão\footnote{Um exemplo de rodapé}
+
+Para exemplo de   \textcolor{red}{\href{www.google.com.br}{link}} adicionado no texto. Ou podemos deixar o link descrito no texto \url{http://florianopolis.ifsc.edu.br/}
+%\href{https://aprendolatex.wordpress.com}{Blog de \LaTeX}
+
+Exemplos de referência Journal articles \cite[cita a pagina 789]{batista2015embarcaccao}, the Digital
+Object Identifier (DOI) of the cited literature (which should be added
+at the end of the reference in question if available).//
+
+pasj\\edfewfgrwe\\ \par rgewrgr\\wfgwegwfw\cite{dvhdl} retg3r
+
+%\newpage  %Nova Pagina
+%Referencias do documento
+\bibliographystyle{abbrvnat} % or try abbrvnat or unsrtnat or plainnat
+\bibliography{referencia} % refers to referencia.bib
+
+\end{document}
